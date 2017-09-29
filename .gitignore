@@ -6,11 +6,14 @@ nbproject
 .recommenders
 RemoteSystemsTempFiles
 Servers
+META-INF
+WEB-INF
 
 #ignore these files
 .project
 .htaccess
 .htpasswd
+.classpath
 
 # Compiled class file
 *.class
