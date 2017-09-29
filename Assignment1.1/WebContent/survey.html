@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/survey.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container-fluid" id="main-container">
+        <header>
+            <div role="banner">
+                <div class="row no-pad" id="top-row">
+                    <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12" id="header-logo">
+                        <h1>
+                            <a id="header-image-link" href="index.html">
+                            <img src="images/logo.png" alt="Computer Science Department George Mason University">
+                        </a>
+                        </h1>
+                    </div>
+                    <div class="col-lg-3 col-lg-offset-4 col-md-4 col-md-offset-2 col-sm-5 col-xs-12" id="nav_search_column">
+                        <div class="row no-pad" id="search_row">
+                            <div id="search_bar" class="col-xs-12">
+                                <form class="form-inline" id="search_form" action="#" role="search">
+                                    <div class="form-group" id="search_group">
+                                        <input type="text" placeholder="Search" name="search" class="form-control" id="search_text">
+                                        <button type="button" class="btn btn-warning btn-md" id="search_btn">
+                                          <span class="glyphicon glyphicon-search">
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row no-pad" id="nav_site_row">
+                            <nav class="col-xs-12" id="nav_site">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="https://volgenau.gmu.edu/">Vse Home</a></li>
+                                    <li><a href="https://www2.gmu.edu/">Mason Home</a></li>
+                                    <li><a href="http://cs.gmu.edu/about/contact-info/">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row no-padding" id="main-content">
+            <div id="page-header" class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+                <p>&nbsp;</p>
+                <p>
+                    Mason is a young university that, in just a short time, has made impressive strides in size, stature and influence. Today,
+                    as Virginia’s largest public research university, we are setting the benchmark for a bold,progressive
+                    education that serves the needs of our students and communities. To that end, we have 10 schools and
+                    colleges devoted to a variety of areas of study.
+                </p>
+                <p>
+                    George Mason, for whom our university is named, was one of the greatest of the founding fathers of the United States. Mason
+                    drafted the Virginia Declaration of Rights, which became a model for the first 10 amendments to the U.S.
+                    Constitution, known as the Bill of Rights.
+                </p>
+                <p>This Survey Form is for the <b>Prospective Students</b> to provide a Feedback about their campus visit.</p>
+                <h3>Survey Form</h3>
+            </div>
+            <div class="survey_form">
+                <form class="form-horizontal" autocomplete="on">
+                    <table id="table-form" class="table">
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="username">Username</label></td>
+                            <td class="col-sm-4"><input class="form-control" type="text" id="username" placeholder="username" tabindex="1" name="username" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2" rowspan="2"><label class="control-label" for="address">Address</label></td>
+                            <td class="col-sm-3"><input class="form-control" type="text" id="address" placeholder="street" name="address" tabindex="2" required></td>
+                            <td class="col-sm-4 td-hide" id="data-error"><span>*Enter at least 10 values between 1 and 100 (inclusive)</span></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-3"><input class="form-control" type="text" id="apatment" placeholder="apartment #" name="address" tabindex="3" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="city">City</label></td>
+                            <td class="col-sm-4"><input class="form-control" type="text" id="city" placeholder="city" name="city" tabindex="4" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="state">State</label></td>
+                            <td class="col-sm-4"><input class="form-control" type="text" id="state" placeholder="state" name="state" tabindex="5" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="zip">ZipCode</label></td>
+                            <td class="col-sm-4"><input class="form-control" type="number" id="zip" placeholder="zipcode" name="zip" maxlength="5" tabindex="6" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label">Telephone</label></td>
+                            <td class="col-sm-4">
+                                <table>
+                                    <tr>
+                                        <td class="col-sm-4"><input class="form-control" type="tel" id="areacode" name="area" maxlength="3" tabindex="7" required></td>
+                                        <td class="col-sm-4"><input class="form-control" type="tel" id="number" name="area" maxlength="3" tabindex="8" required></td>
+                                        <td class="col-sm-4"><input class="form-control" type="tel" id="text" name="area" maxlength="4" tabindex="9" required></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="email">Email</label></td>
+                            <td class="col-sm-4"><input class="form-control" type="email" id="email" placeholder="Email" name="email" tabindex="10" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="url">Blog</label></td>
+                            <td class="col-sm-4"><input class="form-control" type="url" id="url" placeholder="Blog URL" tabindex="11" name="url"></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="s_date">Survey Date</label></td>
+                            <td class="col-sm-4"><input class="form-control" type="date" id="s_date" placeholder="date" name="date" tabindex="12" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2" rowspan="2"><label>What did You like about the Campus</label></td>
+                            <td class="col-sm-4">
+                                <label class="checkbox-inline"><input type="checkbox" tabindex="13" value="">Students</label>
+                                <label class="checkbox-inline"><input type="checkbox" tabindex="14" value="">Location</label>
+                                <label class="checkbox-inline"><input type="checkbox" tabindex="15" value="">Campus</label>
+                            </td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-4">
+                                <label class="checkbox-inline"><input type="checkbox" tabindex="16" value="">Atmosphere</label>
+                                <label class="checkbox-inline"><input type="checkbox" tabindex="17" value="">Dorm Rooms</label>
+                                <label class="checkbox-inline"><input type="checkbox" tabindex="18" value="">Sports</label>
+                            </td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2" rowspan="2"><label>How did they came to know about the University</label></td>
+                            <td class="col-sm-4">
+                                <label class="radio-inline"><input type="radio" tabindex="19" value="">Friends</label>
+                                <label class="radio-inline"><input type="radio" tabindex="20" value="">Television</label>
+                            </td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-4">
+                                <label class="radio-inline"><input type="radio" tabindex="21" value="">Internet</label>
+                                <label class="radio-inline"><input type="radio" tabindex="22" value="">Other</label>
+                            </td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="comments">Comments</label></td>
+                            <td class="col-sm-3"><textarea name="comments" id="comments" cols="45" rows="5" tabindex="23"></textarea>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="grad_date">High School Graduation Date</label></td>
+                            <td class="col-sm-3">
+                                <table>
+                                    <tr>
+                                        <td class="col-sm-3">
+                                            <input list="month" class="form-control" tabindex="24"placeholder="month">
+                                            <datalist id="month">
+                                                <option value="January">
+                                                <option value="February">
+                                                <option value="March">
+                                                <option value="April">
+                                                <option value="May">
+                                                <option value="June">
+                                                <option value="July">
+                                                <option value="August">
+                                                <option value="September">
+                                                <option value="October">
+                                                <option value="November">
+                                                <option value="December">
+                                            </datalist>
+                                        </td>
+                                        <td class="col-sm-3">
+                                            <input type="text" class="form-control col-sm-2" tabindex="25" id="year" placeholder="year" >
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr class="form-group">
+                            <td class="col-sm-2"><label class="control-label" for="recommendation">Will You Recommend the School to your Friends</label></td>
+                            <td class="col-sm-4">
+                                <select class="form-control" id="recommendation" tabindex="26">
+                                    <option></option>
+                                    <option>Very Likely</option>
+                                    <option>Likely</option>
+                                    <option>Unlikely</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr></tr>
+                    </table>
+                    <div class="col-xs-offset-5 col-xs-7">
+                        <button type="submit" class="btn btn-primary btn-lg" tabindex="27">Submit</button>
+                        <button type="reset" class="btn btn-danger btn-lg" tabindex="28">Reset</button>
+                    </div>
+                </form>
+            </div>
+            <p>&nbsp;</p>
+        </div>
+        <footer>
+            <div class="row no-padding">
+                <div class="no-padding col-sm-3 col-xs-6">
+                    <div id="footer-logo">
+                        <a class="footer-img-link" href="https://www2.gmu.edu/">
+                        <img src="images/footer.png" alt="logo image">
+                        </a>
+                    </div>
+                </div>
+                <div class="no-padding col-sm-3 col-xs-6">
+                    <div id="address">
+                        <address>
+                            Department of Computer Science <br/> Nguyen Engineering Building<br/> 4400 University Drive
+                            <br/> Fairfax, VA 22030
+                        </address>
+                    </div>
+                </div>
+                <div class="no-padding col-sm-3 col-xs-6">
+                    <div id="contact">
+                        <p>
+                            <a href="http://cs.gmu.edu/about/contact-info/" data-toggle="tab" onclick="location.reload()">Contact</a><br>                            703-993-1530 (P) <br> 703-993-1710 (F)
+                        </p>
+                    </div>
+                </div>
+                <div class="no-padding col-sm-3 col-xs-6">
+                    <div id="footer-links">
+                        <p>
+                            <a href="https://webdev.gmu.edu/internet-privacy/">Privacy statement</a><br>
+                            <a href="https://irr2.gmu.edu/New/N_IRRHome/HEOA/">Student Consumer Information</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
