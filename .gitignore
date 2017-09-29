@@ -1,3 +1,17 @@
+#Ignore these directories 
+.settings
+test
+nbproject
+.metadata
+.recommenders
+RemoteSystemsTempFiles
+Servers
+
+#ignore these files
+.project
+.htaccess
+.htpasswd
+
 # Compiled class file
 *.class
 
