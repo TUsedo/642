@@ -14,6 +14,7 @@ WEB-INF
 .htaccess
 .htpasswd
 .classpath
+.sql
 
 # Compiled class file
 *.class

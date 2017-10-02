@@ -1,0 +1,23 @@
+create TABLE survey_data(
+	ID int(3) NOT NULL,
+	name varchr(50),
+	address TEXT,
+	apt varchar(15),
+	city varchar(30),
+	state varchar(30),
+	zip int(10),
+	telephone varchar(12),
+	email varchar(100),
+	url TEXT,
+	survey_date varchar(20),
+	campus varchar(100),
+	university varchar(20),
+	comments TEXT,
+	graduation varchar(20),
+	recommendation varchar(15),
+	data varchar(100),
+	average float,
+	maximum int(3),
+	UNIQUE(ID),
+	PRIMARY KEY(ID)
+)
