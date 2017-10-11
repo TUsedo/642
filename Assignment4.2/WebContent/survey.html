@@ -68,11 +68,11 @@
                     <form class="form-horizontal" name="survey_form" id="surveyForm" autocomplete="on" action="survey" method="post"> 
                         <table id="table_form" class="table">
 						<tr class="form-group">
-							<td class="col-sm-2"><label class="control-label" for="id">Student ID without G</label></td>
+							<td class="col-sm-2"><label class="control-label" for="id">Student ID After G00</label></td>
 							<td class="col-sm-4"><input class="form-control" type="text"
-								id="id" placeholder="Your G# number without G" tabindex="1"
-								name="id" pattern="^([0-9]{9})$""
-								title="Only numbers no alphabets"
+								id="id" placeholder="Your G# number without G00" tabindex="1"
+								name="id" pattern="^([1-9][0-9]{5})$""
+								title="Only numbers 0 through 9 and no more than 6"
 								required></td>
 						</tr>
 						<tr class="form-group">
@@ -86,24 +86,8 @@
                                                             pattern="^([A-Za-z0-9]+[\s|,|-]*)+$" title="Only alphabets numeric and alphanumeric characters Please rectify your error" ></td>
                             </tr>
                             <tr class="form-group">
-                                <td class="col-sm-4"><input class="form-control" type="number" id="apatment" placeholder="apartment #" name="apartment" tabindex="3"></td>
+                                <td class="col-sm-4"><input class="form-control" type="text" id="apatment" placeholder="apartment #" name="apartment" tabindex="3"></td>
                             </tr>
-                            <tr class="form-group">
-                                <td class="col-sm-2"><label class="control-label" for="city">City</label></td>
-                                <td class="col-sm-4"><input class="form-control" type="text" id="city" placeholder="city" name="city" tabindex="4" required 
-                                                            pattern="^([A-Z][a-z]+[\s]*[A-Z]*[a-z]*)$" title="Only Alphabets Allowed Please rectify your error" ></td>                         
-                            </tr>
-                            <tr class="form-group" id="state_row">
-                                <td class="col-sm-2"><label class="control-label" for="state">State</label></td>
-                                <td class="col-sm-4"><input class="form-control" type="text" id="state" placeholder="state" name="state" tabindex="5" required data-toggle="popover" 
-                                                            title="State" data-content="Enter only one 50 Valid State Names" data-container="#state_row" data-placement="bottom"></td>
-                            </tr>
-                            <tr class="form-group">
-                                <td class="col-sm-2"><label class="control-label" for="zip">ZipCode</label></td>
-                                <td class="col-sm-4"><input class="form-control" type="text" id="zip" placeholder="zipcode" name="zip" tabindex="6" required pattern="^([0-9]{5})+$" 
-                                                            title="Enter the proper and full Zipcode"></td>
-                            </tr>
-                            <tr class="form-group"><td colspan="2" ><label>AJAX Implementation of fetching city and state info using Zipcode</label></td></tr>
                             <tr class="form-group">
                                 <td class="col-sm-2"><label class="control-label" for="zip">ZipCode</label></td>
                                 <td class="col-sm-4" id="zipRow" data-toggle="popover" data-content="Fetching Data to Validate your Input...." title="Info">
@@ -113,11 +97,11 @@
                             </tr>
                             <tr class="form-group">
                                 <td class="col-sm-2"><label class="control-label" for="city_ajax">City</label></td>
-                                <td class="col-sm-4"><input class="form-control"  name="city_ajax" id="city_ajax" tabindex="-1" disabled></td>
+                                <td class="col-sm-4"><input class="form-control"  name="city" id="city_ajax" tabindex="-1" readonly></td>
                             </tr>
                             <tr class="form-group">
                                 <td class="col-sm-2"><label class="control-label" for="state_ajax">State</label></td>
-                                <td class="col-sm-4"><input class="form-control"  name="state_ajax" id="state_ajax" tabindex="-1" disabled></td>
+                                <td class="col-sm-4"><input class="form-control"  name="state" id="state_ajax" tabindex="-1" readonly></td>
                             </tr>
                             <tr class="form-group">
                                 <td class="col-sm-2"><label class="control-label" for="telephone">Telephone</label></td>
@@ -174,37 +158,12 @@
                             </tr>
                             <tr class="form-group">
                                 <td class="col-sm-2"><label class="control-label" for="grad_date">High School Graduation Date</label></td>
-                                <td class="col-sm-4">
-                                    <table>
-                                        <tr>
-                                            <td class="col-sm-3">
-                                                <input list="month" class="form-control" tabindex="22" placeholder="month" name="grad-month">
-                                                <datalist id="month">
-                                                    <option value="January"></option> 
-                                                    <option value="February"></option>
-                                                    <option value="March"></option>
-                                                    <option value="April"></option>
-                                                    <option value="May"></option>
-                                                    <option value="June"></option>
-                                                    <option value="July"></option>
-                                                    <option value="August"></option>
-                                                    <option value="September"></option>
-                                                    <option value="October"></option>
-                                                    <option value="November"></option>
-                                                    <option value="December"></option>
-                                                </datalist>
-                                            </td>
-                                            <td class="col-sm-3">
-                                                <input type="text" class="form-control col-sm-3" tabindex="23" id="year" placeholder="year" name="grad-year">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
+                                <td class="col-sm-4"><input class="form-control" type="month" id="g_date" placeholder="date" name="graduation" tabindex="22" required></td>
                             </tr>
                             <tr class="form-group">
                                 <td class="col-sm-2"><label class="control-label" for="recommendation">Will You Recommend the School to your Friends</label></td>
                                 <td class="col-sm-4">
-                                    <select class="form-control" id="recommendation" tabindex="24" name="recommendation">
+                                    <select class="form-control" id="recommendation" tabindex="23" name="recommendation">
                                         <option></option>
                                         <option>Very Likely</option>
                                         <option>Likely</option>
@@ -214,22 +173,14 @@
                             </tr>
                             <tr class="form-group"> 
                                 <td class="col-sm-2"><label class="control-label" for="data">Data (Enter at least 10 comma seperated no's ranging 1 through 100)</label></td>
-                                <td class="col-sm-4"><input class="form-control" id="data" tabindex="25" name="data" onblur="computation()" data-toggle="popover" title="Data Error" 
+                                <td class="col-sm-4"><input class="form-control" id="data" tabindex="24" name="data"  data-toggle="popover" title="Data Error" 
                                                             data-content="Enter at least 10 values between 1 and 100 (inclusive)" data-placement="bottom" ></td>
-                            </tr>
-                            <tr class="form-group">
-                                <td class="col-sm-2"><label class="control-label" for="average">Average (Data)</label></td>
-                                <td class="col-sm-4"><input class="form-control"  name="average" id="average" tabindex="-1" readonly></td>
-                            </tr>
-                            <tr class="form-group">
-                                <td class="col-sm-2"><label class="control-label" for="maximum">Maximum No. (Data)</label></td>
-                                <td class="col-sm-4"><input class="form-control"  name="maximum" id="maximum" tabindex="-1" readonly></td>
                             </tr>
                         </table>
                         <div class="col-xs-offset-5 col-xs-7" id="submit_btn" data-toggle="popover" data-content="Fix the above Error's before trying again"
                                     title="Error" data-placement="left">
-                            <button type="submit" id="submit" class="btn btn-primary btn-lg" tabindex="26">Submit</button>
-                            <button type="reset" class="btn btn-danger btn-lg" tabindex="27">Reset</button>
+                            <button type="submit" id="submit" class="btn btn-primary btn-lg" tabindex="25">Submit</button>
+                            <button type="reset" class="btn btn-danger btn-lg" tabindex="26">Reset</button>
                         </div>
                     </form>
                 </div>

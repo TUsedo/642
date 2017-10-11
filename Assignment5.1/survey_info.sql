@@ -1,6 +1,6 @@
-create TABLE survey_data(
-	ID int(3) NOT NULL,
-	name varchr(50),
+create TABLE survey(
+	s_id int(8) NOT NULL,
+	name varchar(50),
 	address TEXT,
 	apt varchar(15),
 	city varchar(30),
@@ -8,7 +8,7 @@ create TABLE survey_data(
 	zip int(10),
 	telephone varchar(12),
 	email varchar(100),
-	url TEXT,
+	blog_url TEXT,
 	survey_date varchar(20),
 	campus varchar(100),
 	university varchar(20),
@@ -16,8 +16,6 @@ create TABLE survey_data(
 	graduation varchar(20),
 	recommendation varchar(15),
 	data varchar(100),
-	average float,
-	maximum int(3),
-	UNIQUE(ID),
-	PRIMARY KEY(ID)
+	UNIQUE(s_id),
+	PRIMARY KEY(s_id)
 )

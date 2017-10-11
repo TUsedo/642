@@ -55,7 +55,7 @@ public class Survey extends HttpServlet {
 			campus_things += " - " + campus[i];
 		
 		String absolutePath = getServletContext().getRealPath("/");
-		File file = new File(absolutePath, "save/survey.info");
+		File file = new File(absolutePath, "/survey.info");
 		FileWriter fw = new FileWriter(file);
 
 		fw.write("Name : " + name + System.getProperty("line.separator"));
