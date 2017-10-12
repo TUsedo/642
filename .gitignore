@@ -15,7 +15,7 @@ WEB-INF
 .htpasswd
 .classpath
 .sql
-.txt
+Student-Info.txt
 # Compiled class file
 *.class
 
