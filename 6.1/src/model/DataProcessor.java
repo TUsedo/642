@@ -8,7 +8,6 @@ public class DataProcessor {
 	
 	public void compute (String ip) {
 	
-		
 		String [] data = ip.split(",");
 		int[] input = new int[data.length];
 		 for(int i=0; i<data.length;i++) {

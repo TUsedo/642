@@ -22,8 +22,7 @@
             	for(String s_id : sid) {
             		out.println("<li><a href=\"/Assignment4.2/survey?sid="+s_id+"\">Link to Retrieve Data for the Student with Student ID :- "+s_id+"</a>");
             		out.println("");
-            	}
-            	
+            	}	
             %>
             </ul>
             
